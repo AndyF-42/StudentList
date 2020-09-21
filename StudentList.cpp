@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <vector>
 
 using namespace std;
 
@@ -16,8 +17,15 @@ void deleteStudent();
 
 int main() {
 
-  char input[10]; 
+  vector<Student*> vPtr;
+
+  vPtr.push_back(new Student);
+  vPtr.push_back(new Student);
+
+  vPtr[0].first = 
   
+  
+  char input[10]; 
   while (strcmp(input, "QUIT") != 0) {
     cin >> input;
     if (strcmp(input, "ADD") == 0) {
@@ -27,7 +35,7 @@ int main() {
     } else if (strcmp(input, "DELETE") == 0) {
       deleteStudent();
     } else if (strcmp(input, "HELP") == 0) {
-      cout << "Valid commands: ADD, PRINT, DELETE" << endl;
+      cout << "Valid commands: ADD, PRINT, DELETE, HELP" << endl;
     } else if (strcmp(input, "QUIT") != 0) {
       cout << "Invalid command. Type HELP for list of valid commands." << endl;
     }
@@ -41,7 +49,9 @@ void addStudent() {
 }
 
 void printStudents() {
-  cout << "Students printed." << endl;
+
+  cout << "printed" << endl;
+  
 }
 
 void deleteStudent() {
